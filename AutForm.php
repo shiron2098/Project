@@ -13,6 +13,7 @@ class AutForm extends Model
     public function rules()
     {
         return [
+            [['login','password'],'required'],
             ['login','string', 'min' => 6,'max'=> 12],
             ['login','unique',
                 'targetClass' => '\app\models\Auti',
